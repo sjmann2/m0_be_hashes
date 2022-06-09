@@ -11,8 +11,9 @@ states = {
 #
 #
 #
-
-
+states.each do |state_abbr_pair|
+  puts "The state of #{state_abbr_pair[0]}'s abbreviation is #{state_abbr_pair[1]}"
+end
 # ======================================
 # 2- Using the following Hash
 
@@ -27,7 +28,9 @@ birthdays = {
 #
 #
 #
-
+birthdays.each do |person, date|
+  puts "My friend #{person}'s birthday is on #{date}"
+end
 
 # ======================================
 # 3- Using the following Hash
@@ -38,7 +41,9 @@ login_statuses = {
   "Amos" => true,
   "Jeff" => true
 }
-
+login_statuses.each do |friend, logged_in|
+  puts "#{friend}" if logged_in
+end
 # Use the each method to iterate through it and print ONLY the names of friends who are "logged in"
 #
 #
